@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="api-base" content="http://localhost:3000" />
     <title>Edzel Redoble</title>
     <meta
       name="description"
@@ -219,7 +220,7 @@
           </p>
           <div class="contact-card">
             <a href="mailto:edzel.wcc@gmail.com">edzel.wcc@gmail.com</a>
-            <form class="contact-form" action="#" method="post">
+            <form class="contact-form" id="contact-form" method="post" novalidate>
               <label>
                 <span>Name</span>
                 <input type="text" name="name" placeholder="Your name" required />
@@ -233,6 +234,7 @@
                 <textarea name="message" rows="4" placeholder="Tell me about your project" required></textarea>
               </label>
               <button class="btn btn-primary" type="submit">Send Message</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </form>
             <div class="socials">
               <a href="https://github.com/xenutheflock" target="_blank" rel="noreferrer">GitHub</a>

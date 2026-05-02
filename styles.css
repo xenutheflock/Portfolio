@@ -592,6 +592,29 @@ body.dark .contact-form textarea {
   outline-offset: 1px;
 }
 
+.form-status {
+  margin-top: 0.15rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  min-height: 1.25rem;
+}
+
+.form-status[data-state="success"] {
+  color: #1c8c4b;
+}
+
+.form-status[data-state="error"] {
+  color: #c03a3a;
+}
+
+body.dark .form-status[data-state="success"] {
+  color: #57d38a;
+}
+
+body.dark .form-status[data-state="error"] {
+  color: #ff8e8e;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 1.2rem 0 2rem;

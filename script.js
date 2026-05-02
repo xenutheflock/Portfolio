@@ -12,6 +12,11 @@ const modal = document.querySelector('#project-modal');
 const modalContent = document.querySelector('#modal-content');
 const modalClose = document.querySelector('.modal-close');
 const caseButtons = document.querySelectorAll('[data-open-modal]');
+const contactForm = document.querySelector('#contact-form');
+const formStatus = document.querySelector('#form-status');
+
+const apiMeta = document.querySelector('meta[name="api-base"]');
+const API_BASE = (apiMeta?.getAttribute('content') || '').trim();
 
 const THEME_KEY = 'portfolio-theme';
 
@@ -162,5 +167,56 @@ updateScrollUI();
 if (backToTopBtn) {
   backToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const payload = {
+      name: String(formData.get('name') || '').trim(),
+      email: String(formData.get('email') || '').trim(),
+      message: String(formData.get('message') || '').trim(),
+    };
+
+    if (!payload.name || !payload.email || !payload.message) {
+      if (formStatus) {
+        formStatus.textContent = 'Please complete all required fields.';
+        formStatus.dataset.state = 'error';
+      }
+      return;
+    }
+
+    if (formStatus) {
+      formStatus.textContent = 'Sending message...';
+      formStatus.dataset.state = 'loading';
+    }
+
+    try {
+      const response = await fetch(`${API_BASE}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message.');
+      }
+
+      contactForm.reset();
+      if (formStatus) {
+        formStatus.textContent = 'Message sent successfully. Thank you!';
+        formStatus.dataset.state = 'success';
+      }
+    } catch (error) {
+      if (formStatus) {
+        formStatus.textContent = error.message || 'Failed to send message.';
+        formStatus.dataset.state = 'error';
+      }
+    }
   });
 }
