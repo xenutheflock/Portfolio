@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edzel Redoble</title>
+    <meta
+      name="description"
+      content="Portfolio of Edzel Redoble, aspiring web developer and UI/UX designer."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=2" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand">Edzel Redoble</a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span><span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="hero">
+        <div class="hero-mesh" aria-hidden="true"></div>
+        <div class="container hero-layout reveal" data-parallax>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+          </div>
+          <div class="hero-copy">
+          <p class="eyebrow">Aspiring Web Developer & UI/UX Designer</p>
+          <h1 class="hero-title">Edzel Redoble</h1>
+          <p class="lead">
+            I design intuitive interfaces and build fast, modern web experiences.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-ghost" href="#contact">Contact Me</a>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container reveal">
+          <h2>About Me</h2>
+          <p class="section-copy">
+            I’m a growth-focused front-end and UI/UX practitioner who blends product
+            thinking with practical implementation. I care deeply about clarity,
+            accessibility, and purposeful interaction design—creating interfaces
+            that look refined, feel intuitive, and perform smoothly.
+          </p>
+          <p class="section-copy about-secondary">
+            My goal is to help teams ship experiences that are both visually
+            premium and genuinely useful, using clean code, strong hierarchy,
+            and thoughtful micro-interactions.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="now">
+        <div class="container reveal">
+          <h2>Currently Learning</h2>
+          <div class="now-grid">
+            <article class="now-card">
+              <h3>Advanced Frontend Patterns</h3>
+              <p>Component architecture, state modeling, and maintainable UI systems.</p>
+            </article>
+            <article class="now-card">
+              <h3>UX Case Studies</h3>
+              <p>Research synthesis, design rationale, and measurable outcome framing.</p>
+            </article>
+            <article class="now-card">
+              <h3>Performance & Accessibility</h3>
+              <p>Core Web Vitals, semantic patterns, and inclusive interaction behaviors.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects" id="projects">
+        <div class="container reveal">
+          <div class="section-heading">
+            <h2>Featured Projects</h2>
+            <p class="section-copy">Selected work that highlights both design thinking and technical execution.</p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card featured" data-project="clarity">
+              <div class="project-thumb" aria-hidden="true"></div>
+              <p class="project-label">Featured</p>
+              <h3>Clarity Finance Dashboard</h3>
+              <p class="project-meta">Role: UI/UX + Frontend • Year: 2026</p>
+              <p>
+                A minimalist analytics dashboard with responsive widgets,
+                smooth transitions, and focused visual hierarchy.
+              </p>
+              <div class="tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span>
+              </div>
+              <button class="case-btn" type="button" data-open-modal="clarity">View Case Study</button>
+            </article>
+
+            <article class="project-card" data-project="studio">
+              <div class="project-thumb" aria-hidden="true"></div>
+              <h3>Studio Portfolio Template</h3>
+              <p class="project-meta">Role: Frontend Developer • Year: 2025</p>
+              <p>
+                A modular personal site template with reusable components,
+                accessibility-first markup, and premium visual polish.
+              </p>
+              <div class="tags">
+                <span>Responsive Design</span><span>UI Systems</span>
+              </div>
+              <button class="case-btn" type="button" data-open-modal="studio">View Case Study</button>
+            </article>
+
+            <article class="project-card" data-project="finder">
+              <div class="project-thumb" aria-hidden="true"></div>
+              <h3>Local Finder App Concept</h3>
+              <p class="project-meta">Role: Product Designer • Year: 2025</p>
+              <p>
+                UI/UX concept for discovering nearby services with streamlined
+                onboarding, intuitive filtering, and clear interaction feedback.
+              </p>
+              <div class="tags">
+                <span>UX Research</span><span>Wireframing</span><span>Prototyping</span>
+              </div>
+              <button class="case-btn" type="button" data-open-modal="finder">View Case Study</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container reveal">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <article class="skill-box">
+              <h3>Web Development</h3>
+              <div class="chips">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript (ES6+)</span><span>Responsive Layout</span><span>Accessibility</span>
+              </div>
+            </article>
+            <article class="skill-box">
+              <h3>UI/UX Design</h3>
+              <div class="chips">
+                <span>Wireframing</span><span>Prototyping</span><span>Design Systems</span><span>Interaction Design</span><span>User Flows</span>
+              </div>
+            </article>
+            <article class="skill-box">
+              <h3>Tools</h3>
+              <div class="chips">
+                <span>Figma</span><span>Git & GitHub</span><span>VS Code</span><span>Notion</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="container reveal">
+          <h2>Education</h2>
+          <div class="timeline">
+            <article class="timeline-card">
+              <p class="date">2023 — Present</p>
+              <h3>Self-Directed Learning Path</h3>
+              <p>
+                Continuous study in modern front-end development and product design,
+                including practical builds and UI case studies.
+              </p>
+            </article>
+            <article class="timeline-card">
+              <p class="date">2025</p>
+              <h3>Portfolio & Product Practice</h3>
+              <p>
+                Built multiple portfolio and dashboard interfaces with focus on
+                hierarchy, component consistency, and production-ready responsiveness.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container reveal">
+          <h2>Contact</h2>
+          <p class="section-copy">
+            Open to internship and junior opportunities where I can contribute,
+            learn, and build thoughtful digital experiences.
+          </p>
+          <div class="contact-card">
+            <a href="mailto:edzel.wcc@gmail.com">edzel.wcc@gmail.com</a>
+            <form class="contact-form" action="#" method="post">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@email.com" required />
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="4" placeholder="Tell me about your project" required></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Send Message</button>
+            </form>
+            <div class="socials">
+              <a href="https://github.com/alexrivera" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://linkedin.com/in/alexrivera" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://dribbble.com/alexrivera" target="_blank" rel="noreferrer">Dribbble</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Edzel Redoble. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+    <dialog class="project-modal" id="project-modal" aria-label="Project case study preview">
+      <button class="modal-close" type="button" aria-label="Close case study">✕</button>
+      <div class="modal-content" id="modal-content"></div>
+    </dialog>
+
+    <script src="script.js?v=2"></script>
+  </body>
+</html>
